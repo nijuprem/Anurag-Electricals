@@ -1,9 +1,14 @@
+import { Box } from "@chakra-ui/react";
+import Contact from "./components/Contact";
 import NavBar from "./components/NavBar";
 
 function App() {
   return (
     <>
-      <NavBar />
+      <Box p={10}>
+        <NavBar />
+        <Contact />
+      </Box>
     </>
   );
 }

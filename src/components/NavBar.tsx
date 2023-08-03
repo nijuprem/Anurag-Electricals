@@ -5,7 +5,13 @@ import logo from "../assets/logo.png";
 const NavBar = () => {
   return (
     <div>
-      <HStack justifyContent={"space-between"} padding={5} paddingBottom={0}>
+      <HStack
+        justifyContent={"space-between"}
+        paddingBottom={5}
+        // pos={"fixed"}
+        top={0}
+        width={"100%"}
+      >
         <Box>
           <Image
             boxSize={"fit-content"}
