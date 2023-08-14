@@ -20,7 +20,7 @@ const NavBar = () => {
             alt="Logo"
           />
         </Box>
-        <Box marginRight={16}>
+        <Box marginRight={13}>
           <HStack>
             <HeadingItems />
           </HStack>

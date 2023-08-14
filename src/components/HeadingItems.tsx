@@ -6,7 +6,7 @@ const HeadingItems = () => {
   return (
     <>
       {navItems.map((nav) => (
-        <Heading key={nav} as="h3" marginRight={5}>
+        <Heading key={nav} as="h3" size="lg" marginRight={5}>
           {nav}
         </Heading>
       ))}

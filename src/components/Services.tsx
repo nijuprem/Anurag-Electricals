@@ -19,6 +19,7 @@ const Services = () => {
       {service.map(({ name, img, list }, index) => (
         <Card
           maxW="md"
+          h={"32rem"}
           margin={5}
           width={"30%"}
           bgColor={"inherit"}

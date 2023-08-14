@@ -19,9 +19,9 @@ const Contact = () => {
             Contact Person: Anurag Bhoir
           </Heading>
           <Text mt={"1rem"}>
-            <b>Address:</b> House No 102,First Floor,Shree Shivshakti
-            Vihar,Nagothane Pezari Road,Nagothana,Raigad Raigad - 402106,
-            Maharashtra, India
+            <b>Address:</b> House No 102, First Floor, Shree Shivshakti Vihar,
+            Nagothane Pezari Road, Nagothana, Raigad - 402106, Maharashtra,
+            India
           </Text>
           <HStack mt={"1rem"}>
             <PhoneIcon />

@@ -10,7 +10,7 @@ import {
 
 const ContactForm = () => {
   return (
-    <Box p={5} width={"50%"}>
+    <Box w={"50%"}>
       <Center>
         <FormControl width={"65%"} textAlign={"center"}>
           <FormLabel mt={4}>Name</FormLabel>
