@@ -19,22 +19,26 @@ const Carousels = ({ imageArr }: Props) => {
   };
 
   useEffect(() => {
-    const interval = setInterval(handleNext, 2000);
+    const interval = setInterval(handleNext, 3000);
     return () => {
       clearInterval(interval);
     };
   }, [index]);
 
   return (
-    <>
+    <Box>
       <Center>
         <Box width={"98%"} height={"30rem"}>
-          <Image
-            src={imageArr[index]}
-            // objectFit="contain"
-            width={"98%"}
-            height={"100%"}
-          ></Image>
+          <Center>
+            <Image
+              ml={"1rem"}
+              borderRadius={"1rem"}
+              src={imageArr[index]}
+              // objectFit="contain"
+              width={"75%"}
+              height={"30rem"}
+            ></Image>
+          </Center>
         </Box>
       </Center>
       <Center>
@@ -50,12 +54,12 @@ const Carousels = ({ imageArr }: Props) => {
               }}
               onClick={() => setIndex(index)}
             >
-              {index}
+              {index + 1}
             </span>
           ))}
         </Box>
       </Center>
-    </>
+    </Box>
   );
 };
 

@@ -1,13 +1,13 @@
-import { Box, Center, Flex, Heading, Text } from "@chakra-ui/react";
+import { Box, Center, Flex, Heading, Image, Text } from "@chakra-ui/react";
 
 interface Abouts {
   title: String;
   info: String;
   work: String;
   goals: String;
-  image: String;
   contractor: String;
   gst: String;
+  image: string;
 }
 
 interface Props {
@@ -44,10 +44,10 @@ function AboutUs({ details }: Props) {
             GST IN: <b>{gst}</b>
           </Text>
         </Box>
-        <Box w={"100%"}>
+        <Box w={"100%"} mr={"2rem"}>
           {" "}
           <Center>
-            <Text>{image}</Text>
+            <Image src={image} borderRadius={"1rem"} />
           </Center>
         </Box>
       </Flex>

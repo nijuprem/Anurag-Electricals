@@ -18,6 +18,8 @@ const Services = () => {
     <Flex flexWrap={"wrap"}>
       {service.map(({ name, img, list }, index) => (
         <Card
+          transition={"0.5s ease-in-out"}
+          _hover={{ transform: "scale(1.05)" }}
           maxW="md"
           h={"32rem"}
           margin={5}
@@ -30,14 +32,22 @@ const Services = () => {
           key={index}
         >
           <CardBody position={"relative"}>
-            <Image src={img} alt={name} borderRadius="lg" />
+            <Image
+              height={"16rem"}
+              width={"100%"}
+              src={img}
+              alt={name}
+              borderRadius="lg"
+            />
             <Stack mt="6" spacing="3">
               <Center>
                 <Heading size="md">{name}</Heading>
               </Center>
-              <UnorderedList listStyleType={"none"}>
+              <UnorderedList>
                 {list.map((data, index) => (
-                  <ListItem key={index}>{data}</ListItem>
+                  <ListItem mt={"0.25rem"} key={index}>
+                    {data}
+                  </ListItem>
                 ))}
               </UnorderedList>
               <Center>
