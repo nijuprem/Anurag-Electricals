@@ -4,7 +4,7 @@ import ContactForm from "./ContactForm";
 
 const Contact = () => {
   return (
-    <Box mt="3rem">
+    <Box mt="3rem" id="contact">
       <Center>
         <Heading as={"h3"} size="xl">
           Contact Us

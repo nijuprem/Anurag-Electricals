@@ -17,7 +17,7 @@ interface Props {
 function AboutUs({ details }: Props) {
   const { title, info, work, goals, contractor, gst, image } = details;
   return (
-    <Box mt="4rem">
+    <Box mt="4rem" id="about">
       <Center>
         <Heading color={"white"}>About Us</Heading>
       </Center>

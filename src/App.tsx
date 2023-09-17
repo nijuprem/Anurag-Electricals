@@ -9,7 +9,7 @@ import { Reveal } from "./components/Reveal";
 
 function App() {
   return (
-    <Box p={10}>
+    <Box p={10} id="home">
       <NavBar />
       <Reveal>
         <Home />

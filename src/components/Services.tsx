@@ -16,7 +16,7 @@ import service from "../data/service";
 
 const Services = () => {
   return (
-    <Box mt="1rem">
+    <Box mt="1rem" id="services">
       <Center>
         <Heading as={"h3"} size="xl">
           Services

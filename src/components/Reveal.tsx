@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 interface Props {
   children: JSX.Element;
-  width?: "fit-content" | "100%";
+  // width?: "fit-content" | "100%";
 }
 
 export const Reveal = ({ children }: Props) => {
@@ -32,12 +32,13 @@ export const Reveal = ({ children }: Props) => {
         }}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration: 0.8, delay: 0.25 }}
+        transition={{ duration: 0.8, delay: 0.35 }}
       >
         {children}
       </motion.div>
 
-      <motion.div
+      {/*
+       <motion.div
         variants={{
           hidden: { left: 0 },
           visible: { left: "100%" },
@@ -54,7 +55,7 @@ export const Reveal = ({ children }: Props) => {
           background: "var(--brand)",
           zIndex: 20,
         }}
-      />
+      /> */}
     </div>
   );
 };
