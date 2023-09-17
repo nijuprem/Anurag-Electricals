@@ -26,7 +26,7 @@ const Carousels = ({ imageArr }: Props) => {
   }, [index]);
 
   return (
-    <Box mt={3} mb="3rem">
+    <Box mt={"4rem"} mb="3rem">
       <Center>
         <Box width={"98%"} height={"30rem"}>
           <Center>

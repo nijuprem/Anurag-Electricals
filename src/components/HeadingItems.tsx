@@ -28,7 +28,7 @@ const HeadingItems = () => {
           to={link}
           spy={true}
           smooth={true}
-          offset={-50}
+          offset={-100}
           duration={700}
           key={index}
         >
