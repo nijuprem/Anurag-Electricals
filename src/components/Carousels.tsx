@@ -26,7 +26,7 @@ const Carousels = ({ imageArr }: Props) => {
   }, [index]);
 
   return (
-    <Box>
+    <Box mt={3} mb="3rem">
       <Center>
         <Box width={"98%"} height={"30rem"}>
           <Center>
@@ -42,7 +42,7 @@ const Carousels = ({ imageArr }: Props) => {
         </Box>
       </Center>
       <Center>
-        <Box mt={2}>
+        <Box mt={5}>
           {imageArr.map((_item, index) => (
             <span
               key={index}

@@ -4,7 +4,7 @@ import ContactForm from "./ContactForm";
 
 const Contact = () => {
   return (
-    <div>
+    <Box mt="3rem">
       <Center>
         <Heading as={"h3"} size="xl">
           Contact Us
@@ -29,12 +29,12 @@ const Contact = () => {
           </HStack>
           <HStack mt={"0.5rem"}>
             <EmailIcon />
-            <Text>abc@abc.com</Text>
+            <Text>banurag199@gmail.com</Text>
           </HStack>
         </Box>
         <ContactForm />
       </Flex>
-    </div>
+    </Box>
   );
 };
 

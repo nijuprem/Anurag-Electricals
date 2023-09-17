@@ -20,7 +20,11 @@ const ContactForm = () => {
           <FormLabel mt={4}>Phone</FormLabel>
           <Input type="number" name="phone" placeholder="Phone" />
           <FormLabel mt={4}>Your Message</FormLabel>
-          <Textarea placeholder="Please enter your message here" />
+          <Textarea
+            rows={4}
+            resize="none"
+            placeholder="Please enter your message here"
+          />
 
           <Button display={"block"} mt={4} colorScheme="yellow" type="submit">
             Submit

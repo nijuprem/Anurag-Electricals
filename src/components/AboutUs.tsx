@@ -17,11 +17,9 @@ interface Props {
 function AboutUs({ details }: Props) {
   const { title, info, work, goals, contractor, gst, image } = details;
   return (
-    <>
+    <Box mt="4rem">
       <Center>
-        <Heading mt={"2.5rem"} color={"white"}>
-          About Us
-        </Heading>
+        <Heading color={"white"}>About Us</Heading>
       </Center>
       <Flex h={"30rem"} m={"1rem"}>
         <Box m="3rem" w={"130%"}>
@@ -51,7 +49,7 @@ function AboutUs({ details }: Props) {
           </Center>
         </Box>
       </Flex>
-    </>
+    </Box>
   );
 }
 
