@@ -32,7 +32,14 @@ const HeadingItems = () => {
           duration={700}
           key={index}
         >
-          <Heading as="h3" size="lg" marginRight={5} cursor="pointer">
+          <Heading
+            _hover={{ color: "rgb(228 190 18)" }}
+            transition={"0.5s ease-in-out"}
+            as="h3"
+            fontSize="1.5rem"
+            marginRight={5}
+            cursor="pointer"
+          >
             {name}
           </Heading>
         </Link>

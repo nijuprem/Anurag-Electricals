@@ -9,7 +9,7 @@ const NavBar = () => {
         zIndex={5}
         backgroundColor={"black"}
         justifyContent={"space-between"}
-        paddingBottom={5}
+        paddingBottom={2}
         pos={"fixed"}
         top={0}
         left={0}
@@ -23,7 +23,7 @@ const NavBar = () => {
             alt="Logo"
           />
         </Box>
-        <Box marginRight={13}>
+        <Box marginRight={"2rem"}>
           <HStack>
             <HeadingItems />
           </HStack>

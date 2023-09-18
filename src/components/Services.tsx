@@ -26,7 +26,10 @@ const Services = () => {
         {service.map(({ name, img, list }, index) => (
           <Card
             transition={"0.5s ease-in-out"}
-            _hover={{ transform: "scale(1.05)" }}
+            _hover={{
+              transform: "scale(1.05)",
+              border: "4px solid rgb(228 190 18)",
+            }}
             maxW="md"
             h={"32rem"}
             margin={5}
