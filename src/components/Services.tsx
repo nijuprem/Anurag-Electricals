@@ -11,7 +11,7 @@ import {
   Center,
   Box,
 } from "@chakra-ui/react";
-
+import { Link } from "react-scroll";
 import service from "../data/service";
 
 const Services = () => {
@@ -22,7 +22,7 @@ const Services = () => {
           Services
         </Heading>
       </Center>
-      <Flex flexWrap={"wrap"} mt={5}>
+      <Flex flexWrap={"wrap"} mt={5} justifyContent={"center"}>
         {service.map(({ name, img, list }, index) => (
           <Card
             transition={"0.5s ease-in-out"}
@@ -31,9 +31,9 @@ const Services = () => {
               border: "4px solid rgb(228 190 18)",
             }}
             maxW="md"
-            h={"32rem"}
+            h={{ lg: "32rem" }}
             margin={5}
-            width={"30%"}
+            width={{ xl: "30%" }}
             bgColor={"inherit"}
             color={"white"}
             border={"2px solid"}
@@ -43,8 +43,8 @@ const Services = () => {
           >
             <CardBody position={"relative"}>
               <Image
-                height={"16rem"}
-                width={"100%"}
+                height={{ lg: "16rem", sm: "13rem" }}
+                width={{ xl: "100%", lg: "20rem", sm: "18rem" }}
                 src={img}
                 alt={name}
                 borderRadius="lg"
@@ -55,21 +55,34 @@ const Services = () => {
                 </Center>
                 <UnorderedList>
                   {list.map((data, index) => (
-                    <ListItem mt={"0.25rem"} key={index}>
+                    <ListItem
+                      mt={"0.25rem"}
+                      key={index}
+                      fontSize={{ base: "15px", md: "s" }}
+                    >
                       {data}
                     </ListItem>
                   ))}
                 </UnorderedList>
                 <Center>
-                  <Text
-                    color="rgb(228 190 18)"
-                    fontSize="2xl"
-                    position={"absolute"}
-                    bottom="-0.45rem"
-                    cursor={"pointer"}
+                  <Link
+                    to="contact"
+                    spy={true}
+                    smooth={true}
+                    offset={-100}
+                    duration={700}
                   >
-                    Contact
-                  </Text>
+                    <Text
+                      color="rgb(228 190 18)"
+                      fontSize="2xl"
+                      position={"absolute"}
+                      bottom="-0.45rem"
+                      cursor={"pointer"}
+                      left={{ md: "38%", sm: "36%" }}
+                    >
+                      Contact
+                    </Text>
+                  </Link>
                 </Center>
               </Stack>
             </CardBody>

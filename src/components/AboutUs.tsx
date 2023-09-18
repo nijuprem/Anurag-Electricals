@@ -21,31 +21,31 @@ function AboutUs({ details }: Props) {
       <Center>
         <Heading color={"white"}>About Us</Heading>
       </Center>
-      <Flex h={{ lg: "30rem" }} m={"1rem"}>
-        <Box m={{ xl: "3rem" }} w={"130%"}>
+      <Flex h={{ md: "30rem" }} m={"1rem"}>
+        <Box m={{ md: "3rem" }} w={"130%"}>
           <Heading as={"h3"} size="md" textAlign={"center"}>
             {title}
           </Heading>
-          <Text mt={"1.5rem"} fontSize={{ base: "14px", md: "s" }}>
+          <Text mt={"1.5rem"} fontSize={{ base: "15px", md: "s" }}>
             {info}
           </Text>
-          <Text mt={"1.5rem"} fontSize={{ base: "14px", md: "s" }}>
+          <Text mt={"1.5rem"} fontSize={{ base: "15px", md: "s" }}>
             {work}
           </Text>
-          <Text mt={"1.5rem"} fontSize={{ base: "14px", md: "s" }}>
+          <Text mt={"1.5rem"} fontSize={{ base: "15px", md: "s" }}>
             {goals}
           </Text>
           <Text
             mt={"1.5rem"}
             textAlign={"center"}
-            fontSize={{ base: "14px", md: "s" }}
+            fontSize={{ base: "15px", md: "s" }}
           >
             Govt. Licensed Contractor: <b>{contractor}</b>
           </Text>
           <Text
             mt={"1.5rem"}
             textAlign={"center"}
-            fontSize={{ base: "14px", md: "s" }}
+            fontSize={{ base: "15px", md: "s" }}
           >
             GST IN: <b>{gst}</b>
           </Text>

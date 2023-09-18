@@ -9,7 +9,7 @@ import { Reveal } from "./components/Reveal";
 
 function App() {
   return (
-    <Box p={{ lg: 10 }} id="home">
+    <Box p={{ lg: 10, sm: 3 }} id="home">
       <NavBar />
       <Reveal>
         <Home />
