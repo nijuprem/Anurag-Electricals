@@ -6,6 +6,7 @@ import Home from "./components/Home";
 import about from "./data/aboutUs";
 import AboutUs from "./components/AboutUs";
 import { Reveal } from "./components/Reveal";
+import Copyright from "./components/Copyright";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Reveal>
         <Contact />
       </Reveal>
+      <Copyright />
     </Box>
   );
 }
