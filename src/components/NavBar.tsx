@@ -14,6 +14,7 @@ const NavBar = () => {
         top={0}
         left={0}
         width={"100%"}
+        height={{ md: "5rem", sm: "3rem" }}
       >
         <Box>
           <Image
