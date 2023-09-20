@@ -14,7 +14,7 @@ const NavBar = () => {
         top={0}
         left={0}
         width={"100%"}
-        height={{ md: "5rem", sm: "3rem" }}
+        height={{ md: "5rem", base: "3rem" }}
       >
         <Box>
           <Image
@@ -24,7 +24,7 @@ const NavBar = () => {
             alt="Logo"
           />
         </Box>
-        <Box marginRight={"2rem"}>
+        <Box marginRight={{ sm: "2rem" }}>
           <HStack>
             <HeadingItems />
           </HStack>

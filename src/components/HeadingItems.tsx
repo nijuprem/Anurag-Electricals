@@ -28,7 +28,7 @@ const HeadingItems = () => {
           to={link}
           spy={true}
           smooth={true}
-          offset={-100}
+          offset={-70}
           duration={700}
           key={index}
         >
@@ -37,7 +37,7 @@ const HeadingItems = () => {
             transition={"0.5s ease-in-out"}
             as="h3"
             fontSize={{ lg: "1.5rem", md: "1rem" }}
-            marginRight={5}
+            marginRight={{ sm: 5, base: 3 }}
             cursor="pointer"
           >
             {name}

@@ -78,7 +78,7 @@ const Services = () => {
                       position={"absolute"}
                       bottom="-0.45rem"
                       cursor={"pointer"}
-                      left={{ md: "38%", sm: "36%" }}
+                      left={{ md: "38%", sm: "36%", base: "40%" }}
                     >
                       Contact
                     </Text>

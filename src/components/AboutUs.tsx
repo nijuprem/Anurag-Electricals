@@ -17,12 +17,12 @@ interface Props {
 function AboutUs({ details }: Props) {
   const { title, info, work, goals, contractor, gst, image } = details;
   return (
-    <Box mt="4rem" id="about">
+    <Box mt={{ md: "4rem", base: "2.5rem" }} id="about">
       <Center>
         <Heading color={"white"}>About Us</Heading>
       </Center>
       <Flex h={{ md: "30rem" }} m={"1rem"}>
-        <Box m={{ md: "3rem" }} w={"130%"}>
+        <Box m={{ md: "3rem" }} w={"130%"} mt={{ md: "1rem" }}>
           <Heading as={"h3"} size="md" textAlign={"center"}>
             {title}
           </Heading>

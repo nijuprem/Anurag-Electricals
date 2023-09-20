@@ -10,9 +10,9 @@ import {
 
 const ContactForm = () => {
   return (
-    <Box pl={{ sm: "2rem", md: 0 }} w={{ base: "100% ", md: "50%" }}>
-      <Center justifyContent={{ sm: "none", md: "center" }}>
-        <FormControl width={{ sm: "92%", md: "65%" }} textAlign={"center"}>
+    <Box pl={{ base: "2rem", md: 0 }} w={{ base: "100% ", md: "50%" }}>
+      <Center justifyContent={{ base: "none", md: "center" }}>
+        <FormControl width={{ base: "92%", md: "65%" }} textAlign={"center"}>
           <FormLabel mt={4}>Name</FormLabel>
           <Input type="name" name="name" placeholder="Your Name" />
           <FormLabel mt={4}>Email</FormLabel>
@@ -28,7 +28,7 @@ const ContactForm = () => {
 
           <Button
             display={"block"}
-            left={{ sm: "41%", md: 0 }}
+            left={{ base: "41%", md: 0 }}
             mt={4}
             colorScheme="yellow"
             type="submit"
