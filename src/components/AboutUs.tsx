@@ -26,26 +26,26 @@ function AboutUs({ details }: Props) {
           <Heading as={"h3"} size="md" textAlign={"center"}>
             {title}
           </Heading>
-          <Text mt={"1.5rem"} fontSize={{ base: "15px", md: "s" }}>
+          <Text mt={"1.5rem"} fontSize={{ base: "sm", md: "15px" }}>
             {info}
           </Text>
-          <Text mt={"1.5rem"} fontSize={{ base: "15px", md: "s" }}>
+          <Text mt={"1.5rem"} fontSize={{ base: "sm", md: "15px" }}>
             {work}
           </Text>
-          <Text mt={"1.5rem"} fontSize={{ base: "15px", md: "s" }}>
+          <Text mt={"1.5rem"} fontSize={{ base: "sm", md: "15px" }}>
             {goals}
           </Text>
           <Text
             mt={"1.5rem"}
             textAlign={"center"}
-            fontSize={{ base: "15px", md: "s" }}
+            fontSize={{ base: "sm", md: "15px" }}
           >
             Govt. Licensed Contractor: <b>{contractor}</b>
           </Text>
           <Text
             mt={"1.5rem"}
             textAlign={"center"}
-            fontSize={{ base: "15px", md: "s" }}
+            fontSize={{ base: "sm", md: "15px" }}
           >
             GST IN: <b>{gst}</b>
           </Text>

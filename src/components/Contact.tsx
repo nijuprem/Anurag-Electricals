@@ -13,7 +13,7 @@ const Contact = () => {
       <Flex mt={{ sm: "0rem", md: "2rem" }} flexWrap={"wrap"}>
         <Box
           p={8}
-          w={{ md: "50%" }}
+          w={{ md: "50%", base: "100%" }}
           borderRight={{ md: "2px" }}
           borderColor={{ md: "rgb(228 190 18)" }}
         >

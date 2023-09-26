@@ -32,15 +32,15 @@ const Carousels = ({ imageArr }: Props) => {
       mb={{ sm: "3rem", base: "1rem" }}
     >
       <Center>
-        <Box width={"98%"} height={{ lg: "30rem", sm: "20rem", base: "15rem" }}>
+        <Box width={"98%"} height={{ lg: "30rem", sm: "18rem", base: "14rem" }}>
           <Center>
             <Image
-              ml={{ sm: "1rem" }}
+              ml={{ md: "1rem" }}
               borderRadius={"1rem"}
               src={imageArr[index]}
               // objectFit="contain"
               width={{ md: "75%", base: "100%" }}
-              height={{ lg: "30rem", sm: "20rem", base: "17rem" }}
+              height={{ lg: "30rem", sm: "18rem", base: "15rem" }}
             ></Image>
           </Center>
         </Box>

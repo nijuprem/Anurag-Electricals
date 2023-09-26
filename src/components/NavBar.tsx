@@ -24,7 +24,7 @@ const NavBar = () => {
             alt="Logo"
           />
         </Box>
-        <Box marginRight={{ sm: "2rem" }}>
+        <Box marginRight={{ md: "2rem", base: "0.5rem" }}>
           <HStack>
             <HeadingItems />
           </HStack>
