@@ -9,6 +9,7 @@ import {
 } from "@chakra-ui/react";
 import axios from "axios";
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
   const [name, setName] = useState("");
@@ -16,7 +17,9 @@ const ContactForm = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = () => {
+  // const form = useRef();
+
+  const handleSubmit = (e: { preventDefault: () => void }) => {
     if (name.length === 0) {
       alert("Name has left Blank!");
     } else if (mobile.length === 0) {
@@ -35,12 +38,30 @@ const ContactForm = () => {
         .then((response) => alert(response.data))
         .catch((error) => alert(error));
     }
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "YOUR_SERVICE_ID",
+        "YOUR_TEMPLATE_ID",
+        // form.current,
+        "YOUR_PUBLIC_KEY"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
 
   return (
     <Box pl={{ base: "2rem", md: 0 }} w={{ base: "100% ", md: "50%" }}>
       <Center justifyContent={{ base: "none", md: "center" }}>
-        <>
+        {/* <form ref={form}> */}
+        <form>
           <FormControl width={{ base: "92%", md: "65%" }} textAlign={"center"}>
             <FormLabel mt={4}>Name</FormLabel>
             <Input
@@ -93,7 +114,7 @@ const ContactForm = () => {
               Submit
             </Button>
           </FormControl>
-        </>
+        </form>
       </Center>
     </Box>
   );
