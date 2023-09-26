@@ -61,7 +61,7 @@ const ContactForm = () => {
     <Box pl={{ base: "2rem", md: 0 }} w={{ base: "100% ", md: "50%" }}>
       <Center justifyContent={{ base: "none", md: "center" }}>
         {/* <form ref={form}> */}
-        <form>
+        <form style={{ display: "contents" }}>
           <FormControl width={{ base: "92%", md: "65%" }} textAlign={"center"}>
             <FormLabel mt={4}>Name</FormLabel>
             <Input
