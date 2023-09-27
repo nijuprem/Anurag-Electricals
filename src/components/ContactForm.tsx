@@ -36,17 +36,17 @@ const ContactForm = () => {
         message: "Please enter a valid name",
         duration: 2.5,
       });
-    } else if (mobile.length === 0 || mobile.length != 10) {
-      api["warning"]({
-        message: "Incorrect Mobile Number",
-        description: "Please enter a valid mobile number.",
-        duration: 2,
-      });
     } else if (email.length <= 5 || !email.match(validRegex)) {
       api["warning"]({
         message: "Please enter a valid email Id",
         description: "So we can get back to you.",
         duration: 2.5,
+      });
+    } else if (mobile.length === 0 || mobile.length != 10) {
+      api["warning"]({
+        message: "Incorrect Mobile Number",
+        description: "Please enter a valid mobile number.",
+        duration: 2,
       });
     }
     // else if (message.length === 0) {
@@ -108,7 +108,7 @@ const ContactForm = () => {
       <Box pl={{ base: "2rem", md: 0 }} w={{ base: "100% ", md: "50%" }}>
         <Center justifyContent={{ base: "none", md: "center" }}>
           {/* <form ref={form}> */}
-          <form style={{ display: "contents" }}>
+          <form style={{ display: "contents" }} method="post">
             <FormControl
               width={{ base: "92%", md: "65%" }}
               textAlign={"center"}
@@ -128,7 +128,7 @@ const ContactForm = () => {
               <Input
                 type="email"
                 name="email"
-                placeholder="Email"
+                placeholder="Please enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
@@ -136,7 +136,7 @@ const ContactForm = () => {
               <Input
                 type="number"
                 name="mobile"
-                placeholder="Phone"
+                placeholder="Please enter your contact number"
                 id="mobile"
                 value={mobile}
                 onChange={(e) => setMobile(e.target.value)}
