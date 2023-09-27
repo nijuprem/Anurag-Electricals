@@ -33,12 +33,13 @@ const HeadingItems = () => {
           key={index}
         >
           <Heading
-            _hover={{ color: "rgb(228 190 18)" }}
+            _hover={{ color: "white" }}
             transition={"0.5s ease-in-out"}
             as="h3"
             fontSize={{ lg: "1.5rem", md: "1rem" }}
             marginRight={{ sm: 5, base: 3 }}
             cursor="pointer"
+            color={"rgb(228 190 18)"}
           >
             {name}
           </Heading>

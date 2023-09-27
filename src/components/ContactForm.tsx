@@ -105,11 +105,13 @@ const ContactForm = () => {
               display={"block"}
               left={{ base: "41%", md: 0 }}
               mt={4}
-              colorScheme="yellow"
+              backgroundColor="rgb(228 190 18)"
               type="submit"
               id="submit"
               value="Register"
               onClick={handleSubmit}
+              transition={"0.5s ease-in-out"}
+              _hover={{ backgroundColor: "yellow" }}
             >
               Submit
             </Button>

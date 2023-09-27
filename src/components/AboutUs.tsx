@@ -19,7 +19,7 @@ function AboutUs({ details }: Props) {
   return (
     <Box mt={{ md: "4rem", base: "2.5rem" }} id="about">
       <Center>
-        <Heading color={"white"}>About Us</Heading>
+        <Heading color={"rgb(228 190 18)"}>About Us</Heading>
       </Center>
       <Flex h={{ md: "30rem" }} m={"1rem"}>
         <Box m={{ md: "3rem" }} w={"130%"} mt={{ md: "1rem" }}>

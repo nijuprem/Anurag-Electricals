@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <Box mt="3rem" id="contact">
       <Center>
-        <Heading as={"h3"} size="xl">
+        <Heading as={"h3"} size="xl" color="rgb(228 190 18)">
           Contact Us
         </Heading>
       </Center>
