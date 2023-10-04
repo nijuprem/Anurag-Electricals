@@ -8,8 +8,8 @@ import {
   Box,
 } from "@chakra-ui/react";
 import axios from "axios";
-import { useState } from "react";
-// import emailjs from "@emailjs/browser";
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import { notification } from "antd";
 
 const ContactForm = () => {
@@ -17,14 +17,15 @@ const ContactForm = () => {
   const [mobile, setMobile] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [load, setLoad] = useState(false);
 
   const [api, contextHolder] = notification.useNotification();
 
   const validRegex =
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-  // const form = useRef();
+  const form = useRef(null);
 
-  const handleSubmit = (e: { preventDefault: () => void }) => {
+  const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
     if (name.length === 0) {
       api["warning"]({
@@ -57,48 +58,51 @@ const ContactForm = () => {
     //   });
     // }
     else {
-      const url = "http://localhost/anurag/formsubmit.php";
-      let fData = new FormData();
-      fData.append("name", name);
-      fData.append("mobile", mobile);
-      fData.append("email", email);
-      fData.append("message", message);
-      axios
-        .post(url, fData)
-        .then(() =>
-          api["success"]({
-            message: "Thank you for the message",
-            description: "We'll get back to you soon.",
-            duration: 2.5,
-          })
-        )
-        .catch(() =>
-          api["info"]({
-            message: "Your Message could not be sent",
-            description: "Please try again in some time.",
-            duration: 2.5,
-          })
-        );
-
-      // emailjs
-      //   .sendForm(
-      //     "YOUR_SERVICE_ID",
-      //     "YOUR_TEMPLATE_ID",
-      //     // form.current,
-      //     "YOUR_PUBLIC_KEY"
-      //   )
-      //   .then(
-      //     (result) => {
-      //       console.log(result.text);
-      //     },
-      //     (error) => {
-      //       console.log(error.text);
-      //     }
-      //   );
-      setName("");
-      setMobile("");
-      setEmail("");
-      setMessage("");
+      setLoad(true);
+      setTimeout(async () => {
+        const url = "http://localhost/anurag/formsubmit.php";
+        let fData = new FormData();
+        fData.append("name", name);
+        fData.append("mobile", mobile);
+        fData.append("email", email);
+        fData.append("message", message);
+        await axios
+          .post(url, fData)
+          .then(() =>
+            api["success"]({
+              message: "Thank you for the message",
+              description: "We'll get back to you soon.",
+              duration: 2.5,
+            })
+          )
+          .catch(() =>
+            api["info"]({
+              message: "Your Message could not be sent",
+              description: "Please try again in some time.",
+              duration: 2.5,
+            })
+          );
+        emailjs
+          .sendForm(
+            "service_g6v6xid",
+            "template_wcfb9al",
+            form.current!,
+            "G3SJ4F-75AWlB3m13"
+          )
+          .then(
+            (result) => {
+              console.log(result.text);
+            },
+            (error) => {
+              console.log(error.text);
+            }
+          );
+        setLoad(false);
+        setName("");
+        setMobile("");
+        setEmail("");
+        setMessage("");
+      }, 1000);
     }
   };
 
@@ -107,8 +111,8 @@ const ContactForm = () => {
       {contextHolder}
       <Box pl={{ base: "2rem", md: 0 }} w={{ base: "100% ", md: "50%" }}>
         <Center justifyContent={{ base: "none", md: "center" }}>
-          {/* <form ref={form}> */}
-          <form style={{ display: "contents" }} method="post">
+          <form ref={form} style={{ display: "contents" }} method="post">
+            {/* <form style={{ display: "contents" }} method="post">// */}
             <FormControl
               width={{ base: "92%", md: "65%" }}
               textAlign={"center"}
@@ -152,7 +156,8 @@ const ContactForm = () => {
               />
 
               <Button
-                display={"block"}
+                isLoading={load}
+                display={"flex"}
                 left={{ base: "41%", md: 0 }}
                 mt={4}
                 backgroundColor="rgb(228 190 18)"
@@ -162,6 +167,7 @@ const ContactForm = () => {
                 onClick={handleSubmit}
                 transition={"0.5s ease-in-out"}
                 _hover={{ backgroundColor: "yellow" }}
+                loadingText="Sending"
               >
                 Submit
               </Button>

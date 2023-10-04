@@ -35,17 +35,25 @@ const Contact = () => {
           </Heading>
           <Text mt={"1rem"} fontSize={{ base: "15px", md: "s" }}>
             <b>Address:</b> House No 102, First Floor, Shree Shivshakti Vihar,
-            Nagothane Pezari Road, Nagothana, Raigad - 402106, Maharashtra,
-            India
+            Nagothane Pezari Road, Nagothana, Raigad, Maharashtra - 402106
+          </Text>
+
+          <HStack mt={"1rem"}>
+            <PhoneIcon />
+            <Text fontSize={{ base: "15px", md: "s" }}>+91-9834287422</Text>
+          </HStack>
+          <Text mt={"1rem"} fontSize={{ base: "15px", md: "s" }}>
+            <b>Address 2:</b> Room no. 301, Ashtavinayak housing society, Plot
+            no- 13, Sector 02, Karanjade, Panvel - 410206
           </Text>
           <HStack mt={"1rem"}>
             <PhoneIcon />
-            <Text fontSize={{ base: "15px", md: "s" }}>+91-8062245122</Text>
+            <Text fontSize={{ base: "15px", md: "s" }}>+91-8149633296</Text>
           </HStack>
           <HStack mt={"0.5rem"}>
             <EmailIcon />
             <Text fontSize={{ base: "15px", md: "s" }}>
-              banurag199@gmail.com
+              <a href="mailto:banurag199@gmail.com">banurag199@gmail.com</a>
             </Text>
           </HStack>
         </Box>

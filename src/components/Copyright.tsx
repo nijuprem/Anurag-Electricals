@@ -1,5 +1,6 @@
 import { Center, HStack, Text } from "@chakra-ui/react";
 import { BiCopyright } from "react-icons/bi";
+
 const Copyright = () => {
   return (
     <Center>

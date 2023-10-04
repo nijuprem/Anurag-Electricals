@@ -7,6 +7,7 @@ import about from "./data/aboutUs";
 import AboutUs from "./components/AboutUs";
 import { Reveal } from "./components/Reveal";
 import Copyright from "./components/Copyright";
+import Terms from "./components/Terms";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Contact />
       </Reveal>
       <Copyright />
+      <Terms />
     </Box>
   );
 }
