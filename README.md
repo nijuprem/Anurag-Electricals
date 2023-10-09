@@ -1,27 +1,12 @@
-# React + TypeScript + Vite
+# Anurag Electricals
+Website Link - https://anuragelectricals.in/
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-Currently, two official plugins are available:
+This was a project created for an electrical contracting company with React.js being used for frontend along with Chakra UI. The database for the form is being managed using PHP MySQL.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![AE1](https://github.com/nijuprem/gaming-world/assets/111877615/2853ddf3-f73c-43bc-a8c4-abb2df05a91e)
 
-## Expanding the ESLint configuration
+![AE2](https://github.com/nijuprem/gaming-world/assets/111877615/c07d6945-aaaa-4271-983e-31a9c633cc44)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
